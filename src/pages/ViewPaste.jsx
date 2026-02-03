@@ -1,8 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-
-const API = "https://paste-bin-backend-0ne3.onrender.com/";
+import { API } from './api'
 
 export default function ViewPaste() {
   const { id } = useParams()
@@ -10,7 +9,7 @@ export default function ViewPaste() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    axios.get(`${API}/api/pastes/${id}`)
+    axios.get(`${API}api/pastes/${id}`)
       .then(res => setData(res.data))
       .catch(() => setError("Paste not found or expired"))
   }, [id])
