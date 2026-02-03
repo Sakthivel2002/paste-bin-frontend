@@ -1,7 +1,8 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { API } from '../api'
+
+const API = process.env.REACT_APP_BACKEND_URL;
 
 export default function ViewPaste() {
   const { id } = useParams()
