@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
-
-const API = "https://paste-bin-backend-0ne3.onrender.com/";
+import { API } from './api'
 
 export default function CreatePaste() {
   const [content, setContent] = useState('')
@@ -13,7 +12,7 @@ export default function CreatePaste() {
   const submit = async () => {
     setError(null)
     try {
-      const res = await axios.post(`${API}/api/pastes`, {
+      const res = await axios.post(`${API}api/pastes`, {
         content,
         ttl_seconds: ttl ? Number(ttl) : undefined,
         max_views: maxViews ? Number(maxViews) : undefined
