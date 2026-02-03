@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import axios from 'axios'
-import { API } from '../api'
+
+
+const API = process.env.REACT_APP_BACKEND_URL;
+
 
 export default function CreatePaste() {
   const [content, setContent] = useState('')
