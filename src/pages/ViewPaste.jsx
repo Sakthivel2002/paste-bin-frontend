@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const API = import.meta.env.VITE_API_URL
+const API = "https://paste-bin-backend-0ne3.onrender.com/";
 
 export default function ViewPaste() {
   const { id } = useParams()
