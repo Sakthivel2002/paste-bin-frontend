@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 
-const API = import.meta.env.VITE_API_URL
+const API = "https://paste-bin-backend-0ne3.onrender.com/";
 
 export default function CreatePaste() {
   const [content, setContent] = useState('')
